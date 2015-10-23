@@ -1,0 +1,6 @@
+# color.sh
+# Tells ubuntu.sh to use a color prompt.
+#
+# NOTE: This file is written by Chef. Do not modify it.
+#
+export force_color_prompt=yes

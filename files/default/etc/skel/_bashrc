@@ -1,0 +1,19 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+#
+# NOTE: This file is written by Chef. Do not modify it.
+#
+# This file causes the any script found in `~/.profile.d` to be sourced.
+# If you wish to customize your environment, simply add a bash script with
+#   a `.sh` extension to that directory.
+# The stock Ubuntu `~/.bashrc` file can be found in
+#   `~/.profile.d/010-ubuntu.sh`.
+
+
+if [ -d ~/.profile.d ]; then
+    for i in ~/.profile.d/*.sh; do
+        if [ -r $i ]; then
+            . $i
+        fi
+    done
+    unset i
+fi

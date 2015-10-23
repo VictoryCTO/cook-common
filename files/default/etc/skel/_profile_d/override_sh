@@ -1,0 +1,32 @@
+#
+# -- History Settings --
+#
+# Don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options.
+HISTCONTROL=ignoreboth
+
+# Append to the history file; don't overwrite it.
+shopt -s histappend
+
+# Use a nicer time format.
+export HISTTIMEFORMAT="%y-%h-%d %H:%M:%S "
+
+
+#
+# -- window sizing --
+#
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+
+#
+# -- vim keybindings --
+#
+set -o vi
+
+
+#
+# -- Fancy Prompt --
+#
+export PS1="\[$(tput setaf 2)$(tput bold)\]\u@\h\[$(tput sgr0)\]:\[$(tput setaf 6)$(tput bold)\]\w \t\[$(tput sgr0)\] >"
